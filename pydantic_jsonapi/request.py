@@ -14,8 +14,8 @@ class RequestDataModel(GenericModel, Generic[TypeT, AttributesT]):
     """
     type: TypeT
     attributes: AttributesT
-    id: Optional[str]
-    relationships: Optional[RequestRelationshipsType]
+    id: Optional[str] = None
+    relationships: Optional[RequestRelationshipsType] = None
 
 
 DataT = TypeVar('DataT', bound=RequestDataModel)
